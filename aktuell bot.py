@@ -9,8 +9,8 @@ import uuid
 from google.api_core.exceptions import ResourceExhausted
 
 # --- Configuration ---
-TELEGRAM_TOKEN = "7463890992:AAGHWvIR-XzO-VCdBR5bEr-UbIY6XcKI30I"
-GEMINI_API_KEY = "AIzaSyAnnsWGT0ykhKWAT9ryWN-esPhW-RMTYa8"
+TELEGRAM_TOKEN = "your-telegram-bot-token"
+GEMINI_API_KEY = "your-google-gemini-api-key"
 
 # --- Gemini API Initialization ---
 genai.configure(api_key=GEMINI_API_KEY)
