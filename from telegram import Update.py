@@ -5,7 +5,7 @@ import google.generativeai as genai
 TELEGRAM_TOKEN = "your-telegram-bot-token"
 GEMINI_API_KEY = "your-google-gemini-api-key"
 
-genai.configure(api_key="AIzaSyAnnsWGT0ykhKWAT9ryWN-esPhW-RMTYa8") # Используем переменную GEMINI_API_KEY здесь
+genai.configure(api_key="GEMINI_API_KEY") # Используем переменную GEMINI_API_KEY здесь
 model_name = "gemini-2.5-flash" # Названия моделей обычно не имеют префикса "models/" при инициализации
 
 # Инициализируем модель глобально или внутри функции, если предпочтительнее,
@@ -24,6 +24,6 @@ async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(reply)
 
-app = ApplicationBuilder().token("7463890992:AAGHWvIR-XzO-VCdBR5bEr-UbIY6XcKI30I").build() # Используем переменную TELEGRAM_TOKEN здесь
+app = ApplicationBuilder().token("TELEGRAM_TOKEN").build() # Используем переменную TELEGRAM_TOKEN здесь
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, chat))
 app.run_polling()
